@@ -21,10 +21,14 @@ function App() {
         <Header />
         <div className="container">
           <Card>
-            <NavLink to="/" activeClassName="active">
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "inactive")}>
               Home
             </NavLink>
-            <NavLink to="/about" activeClassName="active">
+            <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? "active" : "inactive")}>
               About
             </NavLink>
           </Card>
